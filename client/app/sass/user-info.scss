@@ -1,0 +1,17 @@
+@import "./vars.scss";
+
+user-info {
+    display: block;
+    padding: $space;
+    background-color: $theme--front;
+
+    span {
+        vertical-align: middle;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid;
+        background: transparent;
+    }
+}

@@ -1,0 +1,12 @@
+<div>
+   <ul>
+       <li ng-repeat="user in $ctrl.users track by user.id">
+           <span class="icon">
+               <img height="48px" src="/assets/users/profle_default.png" alt="">
+           </span>
+           
+           <span ng-bind="user.name"></span>
+
+       </li>
+   </ul>
+</div>

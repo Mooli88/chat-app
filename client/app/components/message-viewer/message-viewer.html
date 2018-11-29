@@ -1,0 +1,12 @@
+<div>
+    <ul>
+        <li ng-repeat="message in $ctrl.messages track by message.id"
+            ng-class="{
+                'main-message': message.isUser,
+                'alternate-message': !message.isUser
+            }">
+            
+            <span ng-bind="::message.value"></span>
+        </li>
+    </ul>
+</div>

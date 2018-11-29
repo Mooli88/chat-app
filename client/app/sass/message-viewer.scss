@@ -1,0 +1,34 @@
+@import "./vars.scss";
+
+message-viewer {
+    display: block;
+    padding: $space;
+    background: #D5D5D5 url(../assets/background.png) center;
+    background-size: 16%;
+    height: $one-whole;
+
+    .main-message {
+        background-color: $main;
+        border: 1px solid $weak;
+        align-self: flex-end;
+        
+    }
+    
+    .alternate-message {
+        background-color: $alternate; 
+        border: 1px solid $weak;
+        align-self: flex-start;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+
+        li {
+            padding: 1em;
+            border: 1px solid #f7f7f7;
+            margin-bottom: $space-half;
+            border-radius: 20px;
+        }
+    }
+}

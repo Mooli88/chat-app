@@ -1,0 +1,46 @@
+@import "./vars.scss";
+
+text-io {
+    position: absolute;
+    left: $space-half;
+    right: $space-half;
+    bottom: 0;
+
+    padding: 0 $space-quarter;
+
+    form {
+        display: flex;
+    }
+
+    input,
+    button { 
+        border: 0;
+        border-radius: 20px;
+        box-shadow: 0 4px 9px -5px black;
+    }
+
+    .text-io--input {
+        flex: 2;
+    }
+    
+    .button--send {
+        padding-left: $space-quarter;
+
+        button {
+            transition: transform .05s ease-in;
+            background: #00BFA5 url(../assets/send_icon.png) no-repeat center;
+            transition: background .25s ease;
+    
+            &:active {
+                box-shadow: inset 0px 4px 10px -4px;
+                transform: translateY(1px);
+            }
+
+            span {
+                color: transparent;
+                visibility: hidden;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,20 @@
+<form name=text-io>
+    <div class="text-io--input">
+        <label>
+            <input type="text" placeholder="Type a message"
+                   ng-keyup="$ctrl.submitMessageKeyUp($event)"
+                   ng-model="$ctrl.text">
+        </label>
+    </div>
+    
+    <div class="button--send">
+
+        <button ng-click="$ctrl.sendMessage()"
+                ng-disabled="!$ctrl.isValid">
+        
+            <span class="icon icon--send">send</span>
+        </button>
+    </div>
+
+    
+</form>

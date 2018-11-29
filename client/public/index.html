@@ -1,0 +1,44 @@
+<!DOCTYPE>
+<html lang="en"
+      ng-app="chatApp">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Chat app</title>
+        <meta name="description" content="">
+
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/ico" />
+    </head>
+        
+    <body id="chat-app" 
+          ng-controller="ChatAppContoller as $ctrl">
+
+        <main id="chat-window" 
+              ng-if="$ctrl.user">
+              
+            <div>
+
+                <header>
+                    <user-info user="$ctrl.user"></user-info>
+                </header>
+    
+                <message-viewer messages="$ctrl.messages"
+                                user="$ctrl.user">
+    
+                </message-viewer>
+                
+                <text-io send="$ctrl.sendMessage(textMessage)"></text-io>
+            </div>
+
+            <aside>
+                <users-panel user="$ctrl.user"></users-panel>
+            </aside>
+        </main>
+        
+        <script src="js/third-party.js"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+@import "./vars.scss";
+
+#chat-app {
+    font-size: $normal;
+    background-color: #e8ffe0; 
+    box-sizing: border-box;
+    font-family: sans-serif, monospace;
+    margin: 0;
+
+    main {
+        display: flex;
+        background-color: $under;
+        margin: 0 auto;
+        width: $half-whole + 10%;
+        height: $one-whole;
+        // padding: $space-half $space 0 $space;
+
+        header {
+            box-shadow: 0 8px 20px -8px black;
+            z-index: 2;
+        }
+        & > div:first-of-type {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            box-shadow: 0 0px 28px -7px black;
+        }
+
+        aside {
+            display: flex;
+        }
+    }
+
+    ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+            margin-bottom: $space;
+        }
+    }
+
+    span {
+        display: inline-block;
+    }
+
+    button,
+    input[type='text'] {
+        width: $one-whole;
+        padding: $space;
+        outline: none;
+    }
+
+
+    button {
+        cursor: pointer;
+
+        &[disabled] {
+            background-color: $disabled;
+        }
+    }
+
+    @media only screen and (max-width: 425px) {
+        & {
+            font-size: $small;
+
+            main {
+                width: $one-whole;
+                
+                padding: 0
+            }
+        }
+    }
+
+    @media only screen and (min-width: 426px ) and (max-width: 999px) {
+        main {
+            width: 90%;
+        }
+    }
+    
+
+    @media only screen and (min-width: 1000px) and (max-width: 1399) {
+        main {
+            width: 75%;
+        }
+    }
+    
+    @media only screen and (min-width: 1400px ) {
+        main {
+            width: 45%;
+        }
+    }
+}

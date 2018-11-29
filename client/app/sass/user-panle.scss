@@ -1,0 +1,26 @@
+@import "./vars.scss";
+
+#chat-app 
+users-panel {
+    z-index: 10;
+    overflow-y: scroll;
+    box-shadow: -9px 0px 26px -10px;
+    background-color: #00ccb0;
+
+    ul {
+        padding: 0 $space;
+
+        li span:first-of-type {
+            padding-right: $space-half
+        }
+
+        li span:last-of-type {
+            padding-left: $space-half
+        }
+        
+    }
+
+    img {
+        vertical-align: middle;
+    }
+}

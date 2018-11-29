@@ -1,0 +1,1 @@
+In client folder, run npm start.
